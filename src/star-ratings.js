@@ -6,7 +6,6 @@ class StarRatings extends React.Component {
   state = {
     highestStarHovered: -Infinity
   }
-  fillId = `starGrad${Math.random().toFixed(15).slice(2)}`;
 
   get starRatingsStyle() {
     const starRatingsStyle = {
@@ -55,7 +54,7 @@ class StarRatings extends React.Component {
     return `${formattedRating} ${starText}`;
   }
 
-  
+
   get offsetValue() {
     const rating = this.props.rating;
     const ratingIsInteger = Number.isInteger(rating);
@@ -98,7 +97,7 @@ class StarRatings extends React.Component {
       name
     } = this.props;
     const { highestStarHovered } = this.state;
-        
+
     const numberOfStarsArray = Array.apply(null, Array(numberOfStars));
 
     return numberOfStarsArray.map((_, index) => {
@@ -150,7 +149,9 @@ class StarRatings extends React.Component {
       starRatedColor,
       starEmptyColor
     } = this.props;
-    
+
+    this.fillId = `starGrad${Math.random().toFixed(15).slice(2)}`;
+
     return (
       <div
         className="star-ratings"

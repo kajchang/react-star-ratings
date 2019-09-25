@@ -42,7 +42,7 @@ var StarRatings = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = StarRatings.__proto__ || Object.getPrototypeOf(StarRatings)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       highestStarHovered: -Infinity
-    }, _this.fillId = 'starGrad' + Math.random().toFixed(15).slice(2), _this.hoverOverStar = function (starRating) {
+    }, _this.hoverOverStar = function (starRating) {
       return function () {
         _this.setState({
           highestStarHovered: starRating
@@ -71,6 +71,8 @@ var StarRatings = function (_React$Component) {
           starRatedColor = _props.starRatedColor,
           starEmptyColor = _props.starEmptyColor;
 
+
+      this.fillId = 'starGrad' + Math.random().toFixed(15).slice(2);
 
       return _react2.default.createElement(
         'div',
